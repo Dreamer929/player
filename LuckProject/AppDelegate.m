@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [application beginBackgroundTaskWithExpirationHandler:nil];
+    self.window.rootViewController = [[RootViewController alloc]init];
+    
     return YES;
 }
 
